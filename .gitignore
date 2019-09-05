@@ -23,6 +23,8 @@
 hs_err_pid*
 
 target
+**/node
+**/node
 **/node_modules
 **/resources/static
 

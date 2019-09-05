@@ -1,0 +1,24 @@
+.outer-container {
+    margin-left: 15px;
+}
+
+.vertical-space-sm {
+    margin-bottom: 5px;
+}
+
+.vertical-space-lg {
+    margin-bottom: 10px;
+}
+
+.vertical-space-xl {
+    margin-bottom: 20px;
+}
+
+td.form-label {
+    color: gray;
+    font-size: smaller;
+    padding-right: 10px;
+    vertical-align: middle;
+    width: 5%;
+}
+
