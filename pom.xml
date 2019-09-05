@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>alma.obops</groupId>
-	<artifactId>gateway</artifactId>
+	<artifactId>spring-cloud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>scg-sandbox</name>
-	<description>Spring Cloud Gateway Sandbox</description>
+	<name>Spring Cloud Gateway Demo</name>
+	<description>TODO</description>
 
 	<properties>
 		<java.version>11</java.version>
