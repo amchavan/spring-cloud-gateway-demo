@@ -22,12 +22,4 @@ public class Controller {
         u.year = Integer.toString( year );
         return u;
     }
-
-    // This API is "documented" at http://garbage.world/posts/libgen/
-    private String remoteServiceUrl = "http://gen.lib.rus.ec/json.php?fields=title,author,id,lcc,city,publisher,year&ids=";
-
-    @GetMapping( "/rbook/{id}" )
-    public ResponseEntity<?> proxy(@PathVariable Long id, ProxyExchange<byte[]> proxy) {
-        return proxy.uri( remoteServiceUrl + id ).get();
-    }
 }

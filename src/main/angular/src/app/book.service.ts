@@ -10,7 +10,7 @@ export class BookService {
     }
 
     private bookServiceUrl = 'book/';
-    private otherServiceUrl = 'rbook/';
+    private otherServiceUrl = 'http://gen.lib.rus.ec/json.php?fields=title,author,id,lcc,city,publisher,year&ids=';
 
     public findUser(bookID: number) {
         const url = (bookID < 1000) ? this.bookServiceUrl : this.otherServiceUrl;
