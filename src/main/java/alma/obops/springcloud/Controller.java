@@ -1,4 +1,4 @@
-package alma.obops.gateway;
+package alma.obops.springcloud;
 
 import org.springframework.cloud.gateway.mvc.ProxyExchange;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +24,7 @@ public class Controller {
     }
 
     // This API is "documented" at http://garbage.world/posts/libgen/
-    String remoteServiceUrl = "http://gen.lib.rus.ec/json.php?fields=title,author,id,lcc,city,publisher,year&ids=";
+    private String remoteServiceUrl = "http://gen.lib.rus.ec/json.php?fields=title,author,id,lcc,city,publisher,year&ids=";
 
     @GetMapping( "/rbook/{id}" )
     public ResponseEntity<?> proxy(@PathVariable Long id, ProxyExchange<byte[]> proxy) {

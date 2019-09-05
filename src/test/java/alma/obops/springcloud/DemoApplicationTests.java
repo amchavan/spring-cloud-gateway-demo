@@ -1,4 +1,4 @@
-package alma.obops.gateway;
+package alma.obops.springcloud;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

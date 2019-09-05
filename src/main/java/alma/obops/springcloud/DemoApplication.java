@@ -1,4 +1,4 @@
-package alma.obops.gateway;
+package alma.obops.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

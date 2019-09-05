@@ -1,4 +1,4 @@
-package alma.obops.gateway;
+package alma.obops.springcloud;
 
 public class Book {
     public String id;
