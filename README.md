@@ -1,4 +1,8 @@
-# spring-cloud-gateway-demo
+# spring-cloud-gateway-mvc demo
+
+Use the _spring-cloud-gateway-mvc_ to build a simple
+gateway on top of MVC. This application allows to browse
+books databases.
 
 `git checkout basic`  
 Basic version, all requests go to embedded server and produce bogus books
