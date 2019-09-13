@@ -16,8 +16,9 @@ public class Controller {
 
     @GetMapping( "/book/{id}" )
     public Object remoteFindBookById( @PathVariable Long id, ProxyExchange<byte[]> proxy ) {
-        if( id <= 1000 ) {
-            return bookDao.findOne( id );
+        Book found = bookDao.findOne( id );
+        if( found != null ) {
+            return found;
         }
         return proxy.uri( REMOTE_BOOK_SERVICE_URL + id ).get();
     }
