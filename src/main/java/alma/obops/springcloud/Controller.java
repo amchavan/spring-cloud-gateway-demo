@@ -1,5 +1,6 @@
 package alma.obops.springcloud;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.mvc.ProxyExchange;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,15 +12,11 @@ import java.util.concurrent.ThreadLocalRandom;
 @RestController
 public class Controller {
 
-    @GetMapping( "/book/{id}" )
-    public Book findById(@PathVariable String id ) {
-        Book u = new Book();
-        u.id = id;
-        u.title = "This is book " + id;
-        u.author = "A. U. Thor (" + id + ")";
+    @Autowired
+    private BookDao bookDao;
 
-        int year = ThreadLocalRandom.current().nextInt( 1900, 2019 );
-        u.year = Integer.toString( year );
-        return u;
+    @GetMapping( "/book/{id}" )
+    public Book findById( @PathVariable Long id ) {
+        return bookDao.findOne( id );
     }
 }
