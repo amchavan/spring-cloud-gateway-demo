@@ -11,7 +11,7 @@ export class BookService {
         this.http = http;
     }
 
-    public findUser(bookID: number) {
+    public findBook(bookID: number) {
         return this.http.get<Book>( bookServiceUrl + bookID );
     }
 }
