@@ -20,4 +20,4 @@ Fully functional version
 
 `mvn spring-boot:run`
 
-AcUI is available at http://localhost:8080
+A UI is available at http://localhost:8080
