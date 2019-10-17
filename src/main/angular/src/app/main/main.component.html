@@ -1,9 +1,9 @@
 <div class="container-fluid outer-container">
     <div class="row">
         <span>
-            <label for="userid">Book ID</label>
+            <label for="bookid">Book ID</label>
             &nbsp;
-            <input id="userid" [(ngModel)]="userID" type="number" placeholder="Book ID" (keydown.enter)="search()">
+            <input id="bookid" [(ngModel)]="bookID" type="number" placeholder="Book ID" (keydown.enter)="search()">
             &nbsp;
             <button type="button" class="btn btn-primary btn-sm" (click)="search()">
                 <i class="fas fa-search has-text"></i>
@@ -16,26 +16,26 @@
         <h5>Book details</h5>
     </div>
 
-    <div  class="row" *ngIf="currentUser != undefined">
+    <div  class="row" *ngIf="currentBook != undefined">
         <div class="col">
             <table class="table table-compact">
             <thead></thead>
             <tbody>
             <tr>
                 <td class="form-label">ID</td>
-                <td>{{currentUser.id}}</td>
+                <td>{{currentBook.id}}</td>
             </tr>
             <tr>
                 <td class="form-label">Title</td>
-                <td>{{currentUser.title}}</td>
+                <td>{{currentBook.title}}</td>
             </tr>
             <tr>
                 <td class="form-label">Author</td>
-                <td>{{currentUser.author}}</td>
+                <td>{{currentBook.author}}</td>
             </tr>
             <tr>
                 <td class="form-label">Year</td>
-                <td>{{currentUser.year}}</td>
+                <td>{{currentBook.year}}</td>
             </tr>
             </tbody>
         </table>

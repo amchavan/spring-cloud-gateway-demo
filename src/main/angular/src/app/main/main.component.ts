@@ -10,26 +10,26 @@ import { Book } from "../book.model";
 })
 export class MainComponent implements OnInit {
 
-    userID: any;
-    private currentUser: Book;
+    bookID: any;
+    private currentBook: Book;
 
-    constructor( private userService: BookService ) {
+    constructor( private bookService: BookService ) {
     }
 
     ngOnInit() {
     }
 
     search() {
-        if( this.userID === undefined ) {
+        if( this.bookID === undefined ) {
             return;
         }
-        console.log( this.userID );
-        this.userService.findUser( this.userID ).subscribe(data => {
+        console.log( this.bookID );
+        this.bookService.findBook( this.bookID ).subscribe(data => {
             console.log( JSON.stringify( data ));
             if( data instanceof Array) {
                 data = data[0];
             }
-            this.currentUser = data;
+            this.currentBook = data;
         });
     }
 }
